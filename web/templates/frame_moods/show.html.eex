@@ -1,0 +1,18 @@
+<h2>Show frame moods</h2>
+
+<ul>
+
+  <li>
+    <strong>Frame:</strong>
+    <%= @frame_moods.frame_id %>
+  </li>
+
+  <li>
+    <strong>Mood:</strong>
+    <%= @frame_moods.mood_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: frame_moods_path(@conn, :edit, @frame_moods) %>
+<%= link "Back", to: frame_moods_path(@conn, :index) %>

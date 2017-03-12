@@ -24,6 +24,7 @@ defmodule Catrina.Router do
     resources "/moods", MoodController
     resources "/frames", FrameController
     resources "/frame_materials", FrameMaterialsController
+    resources "/frame_moods", FrameMoodsController
   end
 
   # Other scopes may use custom stacks.

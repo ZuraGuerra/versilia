@@ -1,0 +1,28 @@
+<h2>Listing frame moods</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Frame</th>
+      <th>Mood</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for frame_moods <- @frame_moods do %>
+    <tr>
+      <td><%= frame_moods.frame_id %></td>
+      <td><%= frame_moods.mood_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: frame_moods_path(@conn, :show, frame_moods), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: frame_moods_path(@conn, :edit, frame_moods), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: frame_moods_path(@conn, :delete, frame_moods), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New frame moods", to: frame_moods_path(@conn, :new) %>

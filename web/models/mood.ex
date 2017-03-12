@@ -4,6 +4,7 @@ defmodule Catrina.Mood do
   schema "moods" do
     field :name, :string
     field :description, :string
+    has_many :frame_moods, Catrina.FrameMoods
 
     timestamps()
   end

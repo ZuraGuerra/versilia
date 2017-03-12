@@ -3,6 +3,7 @@ defmodule Catrina.Material do
 
   schema "materials" do
     field :name, :string
+    has_many :frame_materials, Catrina.FrameMaterials
 
     timestamps()
   end
