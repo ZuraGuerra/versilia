@@ -4,16 +4,62 @@ section {
   height: 100vh;
 }
 
+#hero {
+  background: url(/images/hero.png);
+  background-repeat: no-repeat;
+  background-origin: center;
+  background-size: cover;
+}
+
 #featured-frames {
   margin: 0 2rem;
   text-align:center;
 }
 
-#featured-frames h2 {
-  margin: 1rem 0;
+#featured-frames .card-title {
+  color: black;
+  font-family: Avenir;
+  font-size: 1.2rem;
+  font-weight: 700;
+  /* bottom: 1rem; */
+  margin-bottom: 9rem;
+  background-color: yellow;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-desc {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+#featured-frames .frames-title {
+  margin: 6rem 0;
+  font-family: Helvetica;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  color:black;
+}
+
+#logo {
+  width: 10rem;
+  margin-top: 2rem;
+  margin-left: -2rem;
 }
 
 #featured-frames .demo-card-square {
   margin:1rem;
-  background-color:#77d687;
+  background-color:#020202;
+}
+
+#footer {
+  background:url(/images/footer.png);
+  background-repeat: no-repeat;
+  background-origin: center;
+  background-size: cover;
 }
