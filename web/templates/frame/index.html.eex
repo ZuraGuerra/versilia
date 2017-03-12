@@ -1,0 +1,36 @@
+<h2>Listing frames</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Artist</th>
+      <th>Surprise url</th>
+      <th>Price</th>
+      <th>Is available</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for frame <- @frames do %>
+    <tr>
+      <td><%= frame.name %></td>
+      <td><%= frame.description %></td>
+      <td><%= frame.artist_id %></td>
+      <td><%= frame.surprise_url %></td>
+      <td><%= frame.price %></td>
+      <td><%= frame.is_available %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: frame_path(@conn, :show, frame), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: frame_path(@conn, :edit, frame), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: frame_path(@conn, :delete, frame), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New frame", to: frame_path(@conn, :new) %>

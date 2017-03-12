@@ -1,0 +1,6 @@
+<h2>Edit frame</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: frame_path(@conn, :update, @frame) %>
+
+<%= link "Back", to: frame_path(@conn, :index) %>

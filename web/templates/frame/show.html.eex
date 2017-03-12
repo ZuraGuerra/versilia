@@ -1,0 +1,38 @@
+<h2>Show frame</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @frame.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @frame.description %>
+  </li>
+
+  <li>
+    <strong>Artist:</strong>
+    <%= @frame.artist_id %>
+  </li>
+
+  <li>
+    <strong>Surprise url:</strong>
+    <%= @frame.surprise_url %>
+  </li>
+
+  <li>
+    <strong>Price:</strong>
+    <%= @frame.price %>
+  </li>
+
+  <li>
+    <strong>Is available:</strong>
+    <%= @frame.is_available %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: frame_path(@conn, :edit, @frame) %>
+<%= link "Back", to: frame_path(@conn, :index) %>
