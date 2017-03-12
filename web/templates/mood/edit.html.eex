@@ -1,0 +1,6 @@
+<h2>Edit mood</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: mood_path(@conn, :update, @mood) %>
+
+<%= link "Back", to: mood_path(@conn, :index) %>

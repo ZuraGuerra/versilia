@@ -1,0 +1,28 @@
+<h2>Listing moods</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for mood <- @moods do %>
+    <tr>
+      <td><%= mood.name %></td>
+      <td><%= mood.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: mood_path(@conn, :show, mood), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: mood_path(@conn, :edit, mood), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: mood_path(@conn, :delete, mood), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New mood", to: mood_path(@conn, :new) %>

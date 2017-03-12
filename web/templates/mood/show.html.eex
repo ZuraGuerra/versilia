@@ -1,0 +1,18 @@
+<h2>Show mood</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @mood.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @mood.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: mood_path(@conn, :edit, @mood) %>
+<%= link "Back", to: mood_path(@conn, :index) %>
