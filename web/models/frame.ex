@@ -24,4 +24,11 @@ defmodule Catrina.Frame do
     |> validate_required([:name, :description, :surprise_url, :price, :is_available])
     |> unique_constraint(:name)
   end
+
+  def get_recent(qty) do
+    from(frame in Catrina.Frame,
+         limit: ^qty,
+         preload: [:frame_photos, frame_moods: [:mood]])
+    |> Catrina.Repo.all
+  end
 end

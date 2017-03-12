@@ -7,29 +7,61 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Catrina!</title>
+    <title>Versilia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-red.min.css" />
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
-    <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
-        <span class="logo"></span>
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+    <style>
+    .demo-layout-transparent {
+      background: BLACK;
+    }
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+      /* This background is dark, so we set text to white. Use 87% black instead if
+         your background is light. */
+      color: white;
+    }
+    </style>
+
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Versilia</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Series</a>
+            <a class="mdl-navigation__link" href="">Libro del mes</a>
+            <a class="mdl-navigation__link" href="">Nosotros</a>
+          </nav>
+        </div>
       </header>
-
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Versilia</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Series</a>
+          <a class="mdl-navigation__link" href="">Libro del mes</a>
+          <a class="mdl-navigation__link" href="">Nosotros</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
       </main>
+    </div>
 
-    </div> <!-- /container -->
+    <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+    <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+
+    <main role="main">
+      <%= render @view_module, @view_template, assigns %>
+    </main>
+
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
