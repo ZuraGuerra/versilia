@@ -1,0 +1,6 @@
+<h2>Edit frame materials</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: frame_materials_path(@conn, :update, @frame_materials) %>
+
+<%= link "Back", to: frame_materials_path(@conn, :index) %>

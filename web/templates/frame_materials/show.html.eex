@@ -1,0 +1,18 @@
+<h2>Show frame materials</h2>
+
+<ul>
+
+  <li>
+    <strong>Frame:</strong>
+    <%= @frame_materials.frame_id %>
+  </li>
+
+  <li>
+    <strong>Material:</strong>
+    <%= @frame_materials.material_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: frame_materials_path(@conn, :edit, @frame_materials) %>
+<%= link "Back", to: frame_materials_path(@conn, :index) %>

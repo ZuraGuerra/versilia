@@ -1,0 +1,28 @@
+<h2>Listing frame materials</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Frame</th>
+      <th>Material</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for frame_materials <- @frame_materials do %>
+    <tr>
+      <td><%= frame_materials.frame_id %></td>
+      <td><%= frame_materials.material_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: frame_materials_path(@conn, :show, frame_materials), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: frame_materials_path(@conn, :edit, frame_materials), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: frame_materials_path(@conn, :delete, frame_materials), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New frame materials", to: frame_materials_path(@conn, :new) %>
