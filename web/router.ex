@@ -20,6 +20,7 @@ defmodule Catrina.Router do
     resources "/artist_categories", ArtistCategoriesController
     resources "/artists", ArtistController
     resources "/artist_urls", ArtistUrlsController
+    resources "/materials", MaterialController
   end
 
   # Other scopes may use custom stacks.
