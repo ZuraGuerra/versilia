@@ -17,6 +17,8 @@ defmodule Catrina.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/anteojos/:id", FrameController, :show
+
     resources "/artist_categories", ArtistCategoriesController
     resources "/artists", ArtistController
     resources "/artist_urls", ArtistUrlsController

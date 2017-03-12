@@ -27,7 +27,7 @@ defmodule Catrina.FrameController do
   end
 
   def show(conn, %{"id" => id}) do
-    frame = Repo.get!(Frame, id)
+    frame = Catrina.Frame.with_deep_info(id)
     render(conn, "show.html", frame: frame)
   end
 

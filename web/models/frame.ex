@@ -31,4 +31,14 @@ defmodule Catrina.Frame do
          preload: [:frame_photos, frame_moods: [:mood]])
     |> Catrina.Repo.all
   end
+
+  def with_deep_info(id) do
+    from(frame in Catrina.Frame,
+         where: frame.id == ^id,
+         preload: [:artist,
+                   :frame_photos,
+                   frame_materials: [:material],
+                   frame_moods: [:mood]])
+    |> Catrina.Repo.one!
+  end
 end
