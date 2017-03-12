@@ -16,7 +16,6 @@
     <tr>
       <td><%= artist.name %></td>
       <td><%= artist.description %></td>
-      <td><%= artist.photo_url %></td>
       <td><%= artist.artist_categories_id %></td>
 
       <td class="text-right">
