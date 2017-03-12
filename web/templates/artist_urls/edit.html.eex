@@ -1,0 +1,6 @@
+<h2>Edit artist urls</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: artist_urls_path(@conn, :update, @artist_urls) %>
+
+<%= link "Back", to: artist_urls_path(@conn, :index) %>

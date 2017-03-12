@@ -6,6 +6,7 @@ defmodule Catrina.Artist do
     field :description, :string
     field :photo_url, :string
     belongs_to :artist_categories, Catrina.ArtistCategories
+    has_many :artist_urls, Catrina.ArtistUrls
 
     timestamps()
   end
