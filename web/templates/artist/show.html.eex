@@ -1,0 +1,28 @@
+<h2>Show artist</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @artist.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @artist.description %>
+  </li>
+
+  <li>
+    <strong>Photo url:</strong>
+    <%= @artist.photo_url %>
+  </li>
+
+  <li>
+    <strong>Artist categories:</strong>
+    <%= @artist.artist_categories_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: artist_path(@conn, :edit, @artist) %>
+<%= link "Back", to: artist_path(@conn, :index) %>

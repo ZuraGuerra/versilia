@@ -18,6 +18,7 @@ defmodule Catrina.Router do
 
     get "/", PageController, :index
     resources "/artist_categories", ArtistCategoriesController
+    resources "/artists", ArtistController
   end
 
   # Other scopes may use custom stacks.

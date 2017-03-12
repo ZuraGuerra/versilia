@@ -4,6 +4,7 @@ defmodule Catrina.ArtistCategories do
   schema "artist_categories" do
     field :name, :string
     field :description, :string
+    has_many :artists, Catrina.Artist
 
     timestamps()
   end
