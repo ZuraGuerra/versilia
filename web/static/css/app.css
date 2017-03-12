@@ -3,3 +3,17 @@ section {
   width: 100vw;
   height: 100vh;
 }
+
+#featured-frames {
+  margin: 0 2rem;
+  text-align:center;
+}
+
+#featured-frames h2 {
+  margin: 1rem 0;
+}
+
+#featured-frames .demo-card-square {
+  margin:1rem;
+  background-color:#77d687;
+}

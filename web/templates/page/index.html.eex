@@ -7,17 +7,19 @@
 <section>
   alksfnlsa
 </section>
-<section>
+<section id="featured-frames">
+  <h2>¿Qué quieres leer?</h2>
   <%= for frame <- @frames do %>
     <style>
       .demo-card-square.mdl-card {
-      width: 320px;
-      height: 320px;
+        width: 320px;
+        height: 320px;
       }
       .demo-card-square > .mdl-card__title {
-      color: #fff;
-      background:
-        url('<%= first_frame_photo_url(frame.frame_photos) %>') bottom right 15% no-repeat #46B6AC;
+        color: #fff;
+        background: url('<%= first_frame_photo_url(frame.frame_photos) %>');
+        background-size: cover;
+        background-position:center;
       }
     </style>
 
@@ -41,4 +43,7 @@
     </div>
   <% end %>
 
+</section>
+<section>
+  aishfas
 </section>
