@@ -17,6 +17,7 @@ defmodule Catrina.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/artist_categories", ArtistCategoriesController
   end
 
   # Other scopes may use custom stacks.
