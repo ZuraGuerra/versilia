@@ -1,0 +1,28 @@
+<h2>Listing frame photos</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Frame</th>
+      <th>Photo url</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for frame_photos <- @frame_photos do %>
+    <tr>
+      <td><%= frame_photos.frame_id %></td>
+      <td><%= frame_photos.photo_url %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: frame_photos_path(@conn, :show, frame_photos), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: frame_photos_path(@conn, :edit, frame_photos), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: frame_photos_path(@conn, :delete, frame_photos), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New frame photos", to: frame_photos_path(@conn, :new) %>

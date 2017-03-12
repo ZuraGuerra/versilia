@@ -1,0 +1,6 @@
+<h2>New frame photos</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: frame_photos_path(@conn, :create) %>
+
+<%= link "Back", to: frame_photos_path(@conn, :index) %>

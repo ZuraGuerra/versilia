@@ -10,6 +10,7 @@ defmodule Catrina.Frame do
     belongs_to :artist, Catrina.Artist
     has_many :frame_materials, Catrina.FrameMaterials
     has_many :frame_moods, Catrina.FrameMoods
+    has_many :frame_photos, Catrina.FramePhotos
 
     timestamps()
   end

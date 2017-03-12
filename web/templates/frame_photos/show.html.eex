@@ -1,0 +1,18 @@
+<h2>Show frame photos</h2>
+
+<ul>
+
+  <li>
+    <strong>Frame:</strong>
+    <%= @frame_photos.frame_id %>
+  </li>
+
+  <li>
+    <strong>Photo url:</strong>
+    <%= @frame_photos.photo_url %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: frame_photos_path(@conn, :edit, @frame_photos) %>
+<%= link "Back", to: frame_photos_path(@conn, :index) %>
